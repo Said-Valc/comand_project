@@ -5,7 +5,7 @@ const router = Router();
 
 //! ФУНКЦИОНАЛ КЛИЕНТА
 router.get("/review", reviewsController.getReview);
-router.post("/review", reviewsController.postReview);
+router.post("/review/:id", reviewsController.postReview);
 router.patch("/review/:id", reviewsController.patchReview);
 
 //! ФУНКЦИОНАЛ АДМИНА

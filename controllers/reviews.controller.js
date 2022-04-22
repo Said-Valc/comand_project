@@ -15,7 +15,7 @@ module.exports.reviewsController = {
   //! пользователь может оставлять свой отзыв;
   postReview: async (req, res) => {
     try {
-      await Review.create({
+      await Review.create(req.params.id, {
         author: req.body.author,
         text: req.body.text,
         product: req.body.product,
